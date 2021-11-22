@@ -28,7 +28,11 @@
         }
 
         .header-block {
+            /* background-color: beige; */
             background-color: rgb(213, 232, 248);
+
+            /* margin: 0 auto;
+            width: 100vh; */
         }
 
         .header-title {
@@ -60,8 +64,9 @@
         }
 
         .good {
-            /* border: 1px solid #000; */
+            border: 1px solid #000;
             /* margin-bottom: 5px; */
+            /* background: whitesmoke; */
             background-color: rgba(213, 241, 222, 0.151);
 
 
@@ -73,7 +78,7 @@
         }
 
         .item-catalog {
-            /* margin: 0 2px 5px; */
+            margin: 0 2px 5px;
             flex: auto;
             max-width: 200px;
             min-width: 120px;
@@ -159,79 +164,64 @@
             color: #ffffff;
             cursor: pointer;
         }
+
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header-block">
-            <div class="header-title">
-                <h1>Лучшие санатории СССР</h1>
+<div class="wrapper">
+    <header class="header-block">
+        <div class="header-title">
+            <h1>Лучшие санатории СССР</h1>
+        </div>
+        <div class="menu-top">
+            <p class="cart-button">Дата: {{data}} </p>
+<!--            <button href="basket.html" class="cart-button" type="button">Корзина</button>-->
+            <a href="index.html" class="cart-button">Главная</a>
+
+
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="container">
+            <h3 class="h1-main">Выбранные туры</h3>
+            <div class="catalog-block">
+                <!--                    <div class="catalog-title">Выбранные туры</div>-->
+                <div class="catalog di-flex"></div>
             </div>
-            <div class="menu-top">
-                <!-- <form action="#" class="search">
-                    <input class="goods-search" type="search" name="q" placeholder="Поиск">
-                    <input class="search-button" type="submit" value="Найти"></p>
-                </form> -->
-
-                <!-- <button href="basket.html" class="cart-button" type="button">Корзина</button> -->
-                <p class="cart-button">Дата: {{data}} </p>
-                <a href="basket.html" class="cart-button">Корзина</a>
-
-                <!-- <a href="#"><img src="img/shopping-cart1.png" alt="contacts"></a> -->
+            <div class="cart-block">
+                <div class="cart-title">Корзина</div>
+                <div class="cart-list di-flex"></div>
+                <button class="cart-btn">очистить корзину</button>
             </div>
-        </header>
+            <form action="" method="post">
+                <fieldset>
+                    <p>Сообщение</p>
+                    <p><label class="title" for="name">Ваше имя:</label>
+                        <input type="text" name="name" id="name"><br/>
+                        <label class="title">Message</label>
+                        <textarea class="textarea" cols="37" rows="5" placeholder="Enter a message"></textarea>
+                    </p>
+                </fieldset>
+                <div class="submit"><input type="submit" value="Регистрация"/></div>
+            </form>
 
-        <main class="content">
-            <div class="container">
-                <h1 class="h1-main">Наши Туры</h1>
-                <div class="catalog-block">
-                    <div class="catalog-title">Каталог</div>
-                    <div class="catalog di-flex"></div>
-                </div>
-                <div class="cart-block">
-                    <div class="cart-title">Корзина</div>
-                    <div class="cart-list di-flex"></div>
-                    <button class="cart-btn">очистить корзину</button>
-                </div>
-                <form action="" method="post">
-                    <fieldset>
-                        <!-- <legend>Зарегистрируйтесь</legend> -->
-                        <p>Зарегистрируйтесь</p>
-                        <p><label class="title" for="name">Ваше имя:</label>
-                            <input type="text" name="name" id="name"><br />
-                            <label class="title" for="email">Ваш email:</label>
-                            <input type="text" name="email" id="email">
-                        </p>
-                        <p><label for="location" class="title">Ближайший центр:</label>
-                            <select name="location" id="location">
-                                <option value="ny">Москва</option>
-                                <option value="il">Санкт-Петербург</option>
-                                <option value="ca">Екатеринбург</option>
-                            </select>
-                        </p>
-                        <span class="title">Являетесь участником?</span>
-                        <label><input type="radio" name="member" value="yes" /> Да</label>
-                        <label><input type="radio" name="member" value="no" /> Нет</label></p>
-                    </fieldset>
-                    <div class="submit"><input type="submit" value="Регистрация" /></div>
-                </form>
-
-            </div>
+        </div>
 
 
-        </main>
+    </main>
 
-        <footer class="footer">
-            <hr>
-            <div class="notice">
-                <p>PythonDevelopment Groop</p>
-                <p>2021 All rights reserved &copy;</p>
-            </div>
-        </footer>
-    </div>
+    <footer class="footer">
+        <hr>
+        <div class="notice">
+            <p>PythonDevelopment Groop</p>
+            <p>2021 All rights reserved &copy;</p>
+        </div>
+    </footer>
+</div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
         class GoodsItem {
             constructor(good) {
                 this.good = good;
@@ -302,7 +292,7 @@
                 const id_product = +event.target.dataset.id_product;
                 const newProduct = this.goods.find((good) => good.id_product === id_product);
                 this._cart.basketList.addToBasket(newProduct);
-                // 
+                //
             }
         }
 
@@ -378,7 +368,7 @@
                     });
                     this.cartListBlock.insertAdjacentHTML(
                         'beforeend', `<div class="rezume">
-                    В корзине ${basketList.countGoodsBasket()} товар(ов) 
+                    В корзине ${basketList.countGoodsBasket()} товар(ов)
                     стоимостью ${basketList.countBasketPrice()}
                 </div>`);
                     this.removeEventHandler();
@@ -462,7 +452,8 @@
             let tv2 = new Product_basis(18, 'Юрмала', 145000, 'Прибалтика', 0);
 
             let catalogList = {
-                goods: [pen, tv, tv1, book, book1, book2, tv2],
+<!--                goods: [pen, tv, tv1, book, book1, book2, tv2],-->
+                goods: [pen, tv, tv1, book],
 
                 addToCatalog(product_name) {
                     this.goods.push(product_name);
@@ -474,7 +465,8 @@
         }
 
         start()
-    </script>
+
+</script>
 </body>
 
 </html>
