@@ -1,5 +1,5 @@
 from datetime import date
-from views import Index, Basket
+from views import Index, Basket, History
 
 
 # front controller
@@ -17,4 +17,5 @@ routes = {
     '/': Index(),
     '/basket/': Basket(),
     '/basket/index.html/': Index(),
+    '/history/': History(),
 }

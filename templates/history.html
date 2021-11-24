@@ -34,14 +34,12 @@
         .header-title {
             margin: 0 16px;
         }
-
         .header-h2 {
             text-align: center;
             margin-bottom: 2px;
             background-color: #2c649338;
             padding: 20px;
         }
-
 
         .menu-top {
             display: flex;
@@ -184,42 +182,17 @@
 
                 <!-- <button href="basket.html" class="cart-button" type="button">Корзина</button> -->
                 <p class="cart-button">Дата: {{data}} </p>
-                <a href="history.html" class="cart-button">История</a>
+                <a href="index.html" class="cart-button">Главная</a>
                 <a href="basket.html" class="cart-button">Корзина</a>
 
                 <!-- <a href="#"><img src="img/shopping-cart1.png" alt="contacts"></a> -->
             </div>
-            <h2 class="header-h2">Исторические Туры</h2>
+            <h2 class="header-h2">История</h2>
 
         </header>
 
         <main class="content">
             <div class="container">
-                <div class="catalog-block">
-                    <div class="catalog-title">Каталог</div>
-                    <div class="catalog di-flex"></div>
-                </div>
-                <div class="cart-block">
-                    <div class="cart-title">Корзина</div>
-                    <div class="cart-list di-flex"></div>
-                    <button class="cart-btn">очистить корзину</button>
-                </div>
-                <form action="" method="post">
-                    <fieldset>
-                        <!-- <legend>Зарегистрируйтесь</legend> -->
-                        <p>Зарегистрируйтесь</p>
-                        <p><label class="title" for="name">Ваше имя:</label>
-                            <input type="text" name="name" id="name"><br />
-                            <label class="title" for="email">Ваш email:</label>
-                            <input type="text" name="email" id="email">
-                        </p>
-                        <span class="title">Уже зарегистрированы?</span>
-                        <label><input type="radio" name="member" value="yes" /> Да</label>
-                        <label><input type="radio" name="member" value="no" /> Нет</label></p>
-                    </fieldset>
-                    <div class="submit"><input type="submit" value="Регистрация" /></div>
-                </form>
-
             </div>
 
 
@@ -306,7 +279,7 @@
                 const id_product = +event.target.dataset.id_product;
                 const newProduct = this.goods.find((good) => good.id_product === id_product);
                 this._cart.basketList.addToBasket(newProduct);
-                // 
+                //
             }
         }
 
@@ -382,7 +355,7 @@
                     });
                     this.cartListBlock.insertAdjacentHTML(
                         'beforeend', `<div class="rezume">
-                    В корзине ${basketList.countGoodsBasket()} товар(ов) 
+                    В корзине ${basketList.countGoodsBasket()} товар(ов)
                     стоимостью ${basketList.countBasketPrice()}
                 </div>`);
                     this.removeEventHandler();

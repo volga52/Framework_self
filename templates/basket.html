@@ -176,8 +176,10 @@
         </div>
         <div class="menu-top">
             <p class="cart-button">Дата: {{data}} </p>
-<!--            <button href="basket.html" class="cart-button" type="button">Корзина</button>-->
+            <!-- <button href="basket.html" class="cart-button" type="button">Корзина</button>-->
             <a href="index.html" class="cart-button">Главная</a>
+            <a href="history.html" class="cart-button">Итория</a>
+
 
 
         </div>
@@ -187,7 +189,7 @@
         <div class="container">
             <h3 class="h1-main">Выбранные туры</h3>
             <div class="catalog-block">
-                <!--                    <div class="catalog-title">Выбранные туры</div>-->
+                <!-- <div class="catalog-title">Выбранные туры</div>-->
                 <div class="catalog di-flex"></div>
             </div>
             <div class="cart-block">
@@ -201,10 +203,10 @@
                     <p><label class="title" for="name">Ваше имя:</label>
                         <input type="text" name="name" id="name"><br/>
                         <label class="title">Message</label>
-                        <textarea class="textarea" cols="37" rows="5" placeholder="Enter a message"></textarea>
+                        <textarea class="textarea" cols="37" rows="5" placeholder="Enter a message" name="message" id="message"></textarea>
                     </p>
                 </fieldset>
-                <div class="submit"><input type="submit" value="Регистрация"/></div>
+                <div class="submit"><input type="submit" value="Отправить"/></div>
             </form>
 
         </div>
@@ -216,6 +218,7 @@
         <hr>
         <div class="notice">
             <p>PythonDevelopment Groop</p>
+            <p>{{data}}</p>
             <p>2021 All rights reserved &copy;</p>
         </div>
     </footer>

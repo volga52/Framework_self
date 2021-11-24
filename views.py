@@ -11,6 +11,11 @@ class Basket:
         return '200 OK', render('basket.html', data=request.get('data', None))
 
 
+class History:
+    def __call__(self, request):
+        return '200 OK', render('history.html', data=request.get('data', None))
+
+
 class NotFound404:
     def __call__(self, request):
         return '404 WHAT', '404 PAGE Not Found'
