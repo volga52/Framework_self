@@ -1,6 +1,4 @@
-import quopri
-
-from requests import PostRequests, GetRequests
+from framework.requests import PostRequestsNew, GetRequests
 
 
 class PageNotFound404:
@@ -15,7 +13,7 @@ class Framework:
     def __init__(self, routes_obj, fronts_obj):
         self.routes_lst = routes_obj
         self.fronts_lst = fronts_obj
-        self.type_request = {'POST': PostRequests, 'GET': GetRequests}
+        self.type_request = {'POST': PostRequestsNew, 'GET': GetRequests}
 
     def __call__(self, environ, start_response):
         # получаем адрес, по которому выполнен переход
