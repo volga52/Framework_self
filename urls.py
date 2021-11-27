@@ -17,6 +17,5 @@ routes = {
     '/': Index(),
     '/index.html/': Index(),
     '/basket.html/': Basket(),
-    # '/basket/index.html/': Index(),
     '/history.html/': History(),
 }
