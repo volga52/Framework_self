@@ -76,7 +76,7 @@ class PostRequestsNew(GetRequests):
         data = self.get_wsgi_input_data(environ)
         # превращаем данные в словарь
         data = self.parse_wsgi_input_data(data)
-        #
+        # обработка 'кирилицы'
         data = decode_value(data)
         return data
 
