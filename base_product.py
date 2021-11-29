@@ -1,4 +1,5 @@
 import json
+import random
 
 from variables import *
 
@@ -73,6 +74,18 @@ class Catalog:
     def save_to_file(self):
         with open("data_file.json", 'w') as w_f:
             json.dump(self.goods_list, w_f, indent=4, ensure_ascii=False)
+
+
+class Direction:
+    def __init__(self, name):
+        self.name = name
+        self.href = ''
+        # index-new.html?direction= {href_key}
+        self.init_href()
+
+    def init_href(self):
+        href_key = {random.randint(1000, 9999)}
+        self.href = href_key
 
 
 if __name__ == '__main__':

@@ -6,7 +6,6 @@ from patterns.make_patterns import Logger
 
 site = Catalog()
 logger = Logger('main')
-# CATALOG = 'catalog'
 
 
 class Index:
@@ -32,7 +31,6 @@ class Admin:
 class NotFound404:
     def __call__(self, request):
         return '404 WHAT', '404 PAGE Not Found'
-
 
 
 class IndexNew:
