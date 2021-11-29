@@ -9,11 +9,12 @@
 
             return `
     <div class="good item-catalog">
-        <img src="#" alt="Photo" height="120" winght="120" class="image">
+        <img src="#" alt="Photo" height="120" wight="120" class="image">
         <div>
             <div><b>Наименование</b>: ${this.good.product_name}</div>
             <div><b>Цена за штуку</b>: ${this.good.price}</div>
             <button class="addToBasket-btn" data-id_product="${this.good.id_product}">Добавить в корзину</button>
+            <div>Категория: ${this.good.direction}</div>
         </div>
     </div>`;
         }

@@ -48,7 +48,7 @@ class Framework:
         #     request_params = GetRequests().get_request_params(environ)
         #     request['request_params'] = request_params
         #     # print(f'Нам пришли GET-параметры: {request_params}')
-        # # print(request)  # {'method': 'GET', 'request_params': {'id': '1', 'category': '10'}}
+        # # print(request)  # {'method': 'GET', 'request_params': {'id_elem': '1', 'category': '10'}}
 
         # print(f'Нам пришёл {method} запрос: {Framework.decode_value(data)}')
         print(f'Нам пришёл {method} запрос: {data}')

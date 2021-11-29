@@ -9,7 +9,7 @@ class GetRequests:
     def parse_input_data(data: str):
         '''
         Функция преобразует пришедшие данные
-        вида 'id=1&category=10' в формат словаря
+        вида 'id_elem=1&category=10' в формат словаря
         '''
         result = {}
         if data:
@@ -89,7 +89,7 @@ class PostRequestsNew(GetRequests):
 #     def parse_input_data(data: str):
 #         '''
 #         Функция преобразует пришедшие данные
-#         вида 'id=1&category=10' в формат словаря
+#         вида 'id_elem=1&category=10' в формат словаря
 #         '''
 #         result = {}
 #         if data:
